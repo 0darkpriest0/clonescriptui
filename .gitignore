@@ -1,1 +1,10 @@
-nome_modules/*
+#git rm -r --cached node_modules
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
