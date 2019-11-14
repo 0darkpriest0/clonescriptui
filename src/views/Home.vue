@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <!-- add Confs component to Home -->
-    CONFIGURATION
+    <p class="threeD">CONFIGURATION</p>
     <Confs v-bind:conf="conf" />
     <br><br>
     <!-- add AddRepo and Repos components to Home -->
-    REPOSITORIES
+    <p class="threeD">REPOSITORIES</p>
     <AddRepo v-on:add-repo="addRepo"/>
     <Repos v-bind:repos="repos" v-on:del-repo="delRepo" />
     <br><br>
@@ -112,9 +112,22 @@ export default {
 
 <style>
 
+    .threeD {
+      margin-left: 10px;
+      width: 97%;
+      color: black;
+      white-space: nowrap;
+      font-size: 1em;
+      font-family: sans-serif;
+      text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey,
+          1px 3px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 3px 0 grey,
+          3px 7px 7px black;
+    }
+
     /* Add Button 
     ==========================*/
   .addButton {
+      margin-left: 10px;
       color: white !important;
       text-transform: uppercase;
       text-decoration: none;

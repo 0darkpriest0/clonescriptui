@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <!-- form to create a new repository -->
         <form @submit="addRepo">
             <input type="text" v-model="name" name="repoName" placeholder="Add Name of New Repository...">
@@ -57,6 +57,13 @@
 </script>
 
 <style scoped>
+
+    .container {
+        display: table;
+        margin: 10px;
+        width: 97%;
+    }
+    
     form{
         display: inline;
     }

@@ -61,13 +61,16 @@
 <style scoped>
 
     .conf-item {
+        display: table;
+        width: 97%;
         color: red;
         background: #f4f4f4;
         padding: 10px;
+        margin: 10px;
         border-bottom: 3px black dotted;
     }
 
-    .is-active{
+    .is-active {
         color: rgb(31, 192, 31);
     }
 

@@ -1,4 +1,8 @@
-{"conf":"","clone_array":[
+{"conf":{
+	"j1": true,
+	"ws_reset": true,
+	"ws_init_already": false
+},"clone_array":[
 	{
 		"uiid": "b51e70c7-0a17-4f20-864f-5785594af3e9",
 		"name": "repoexample1",

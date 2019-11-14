@@ -3,7 +3,7 @@
         <!-- add switch checkbox to show/hide collapsable item -->
         <label class="switch switch-yes-no">
             <input v-b-toggle="repo_id" class="switch-input" type="checkbox" />
-            <span class="switch-label" data-on="Hide" data-off="Show"></span> 
+            <span class="switch-label" data-on="Hide Packages" data-off="Show Packages"></span> 
             <span class="switch-handle"></span> 
         </label>
         <!-- add collapsable item with bootstrap b-collapse connected to switch by id -->
