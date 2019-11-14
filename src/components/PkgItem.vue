@@ -5,7 +5,7 @@
             <!-- add switch checkbox to enable/disable value -->
             <label class="switch">
                 <input class="switch-input" v-model="this.pkg.build" type="checkbox"  v-on:change="markBuild"/>
-                <span class="switch-label" data-on="Build" data-off="Off" />
+                <span class="switch-label" data-on="Build" data-off="No Build" />
                 <span class="switch-handle" />
             </label>
             <!-- print value -->

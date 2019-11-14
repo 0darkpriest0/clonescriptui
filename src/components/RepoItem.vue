@@ -6,7 +6,7 @@
         <!-- add switch checkbox to enable/disable value -->
         <label class="switch">
             <input class="switch-input" v-model="this.repo.clone" type="checkbox" v-on:change="markActive"/>
-            <span class="switch-label" data-on="Clone" data-off="Off" />
+            <span class="switch-label" data-on="Clone" data-off="No Clone" />
             <span class="switch-handle" />
         </label>    
         <!-- print value -->

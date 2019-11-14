@@ -68,6 +68,7 @@
         padding: 10px;
         margin: 10px;
         border-bottom: 3px black dotted;
+    
     }
 
     .is-active {

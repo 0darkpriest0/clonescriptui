@@ -2,7 +2,7 @@
   <div class="about">
     <p>
       init_script web ui v1.0.0.<br>
-      Here you can create the clone.json file used by init_script.
+      Here you can create the clone.json file used by init_script.<br>
       <br><br>
       CONFIGURATION<br>
       Check j1 to enable<br>
@@ -13,7 +13,9 @@
       Check the repository to clone it<br>
       Check the package to build it<br>
       <br><br>
-      SAVE TO FILE button generate a json file formatted for init_script.bash
+      RESET DATA button reset local data<br>
+      LOAD DATA FILE load json file formatted for init_script.bash<br>
+      SAVE DATA TO FILE button generate a json file formatted for init_script.bash<br>
       </p>
   </div>
 </template>

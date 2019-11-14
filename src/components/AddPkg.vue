@@ -1,7 +1,7 @@
 <template>
     <div>
         <form @submit="addPkg">
-            <input type="text" v-model="name" name="pkgName" placeholder="Add Name of New Package...">
+            <input type="text" v-model="name" name="pkgName" placeholder="Name of New Package...">
             <input class="addButton" type="submit" value="Add New Pkg" >
         </form>
     </div>
