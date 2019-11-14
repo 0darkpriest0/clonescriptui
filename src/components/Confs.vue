@@ -1,7 +1,7 @@
 <template>
     <div class="conf-item">
         <!-- binding class to value to change color when true/false-->
-        <div v-bind:class="{'is-active':conf.j1}">
+        <div class="item">
             <!-- add switch checkbox to enable/disable value -->
             <label class="switch" >
                 <input id="prova1" class="switch-input" v-model="this.conf.j1" type="checkbox" v-on:change="markj1On"/>
@@ -9,10 +9,10 @@
                 <span class="switch-handle" />
             </label>
             <!-- print value -->
-            j1: {{this.conf.j1}}
+            <h3 v-bind:class="{'is-active':conf.j1}">j1: {{this.conf.j1}}</h3>
         </div>
         <!-- binding class to value to change color when true/false-->
-        <div v-bind:class="{'is-active':conf.ws_reset}">
+        <div class="item">
             <!-- add switch checkbox to enable/disable value -->
             <label class="switch">
                 <input class="switch-input" v-model="this.conf.ws_reset" type="checkbox" v-on:change="markwsrOn"/>
@@ -20,10 +20,10 @@
                 <span class="switch-handle" />
             </label>  
             <!-- print value -->
-            ws_reset: {{this.conf.ws_reset}}
+            <h3 v-bind:class="{'is-active':conf.ws_reset}">ws_reset: {{this.conf.ws_reset}}</h3>
         </div>
         <!-- binding class to value to change color when true/false-->
-        <div v-bind:class="{'is-active':conf.ws_init_already}">
+        <div class="item">
             <!-- add switch checkbox to enable/disable value -->
             <label class="switch">
                 <input class="switch-input" v-model="this.conf.ws_init_already" type="checkbox" v-on:change="markwsiaOn"/>
@@ -31,7 +31,7 @@
                 <span class="switch-handle" />
             </label>  
             <!-- print value -->
-            ws_init_already: {{this.conf.ws_init_already}}
+            <h3 v-bind:class="{'is-active':conf.ws_init_already}">ws_init_already: {{this.conf.ws_init_already}}</h3>
         </div>
     </div>
 </template>
@@ -68,7 +68,11 @@
         padding: 10px;
         margin: 10px;
         border-bottom: 3px black dotted;
-    
+    }
+
+    .item {
+        display: table-cell;
+        width: 30%;
     }
 
     .is-active {
