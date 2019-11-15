@@ -24,6 +24,13 @@ export default {
     text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
         1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
         5px 13px 15px black;
+    transition: all 0.5s ease 0s;
+    }
+    
+    .threeD:hover {
+        color: rgb(0, 238, 255);
+        letter-spacing: 7px;
+        transition: all 0.5s ease 0s;
     }
 
     .header {

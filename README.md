@@ -1,6 +1,6 @@
-# clonescriptui
+# clonescriptui 
 ```
-## Generate json file used by init_script.bash
+Generate json file used by init_script.bash
 ```
 ## Project setup
 ```

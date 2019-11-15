@@ -10,12 +10,18 @@
             <span class="switch-handle" />
         </label>    
         <!-- print value -->
-        {{repo.name}}
+        name: {{repo.name}}
+        <br>
+        branch: {{repo.branch}}
         <div>
             <!-- add component -->
             <AddPkg v-on:add-pkg="addPkg"/>
         </div>
-        <br>
+        <form @submit="changeBranch">
+            <input type="text" v-model="cBranch" name="changeBranch" placeholder="Name Of Branch...">
+            <input class="addButton" type="submit" value="Change Branch" >
+        </form>
+        <br><br>
         <!-- emit send to parent - delete repository button -->
         <button @click="$emit('del-repo', repo.uiid)" class="del">delete repo</button>
     </div>
@@ -37,6 +43,11 @@ export default {
         AddPkg,
         Pkgss
     },
+    data() {
+        return {
+            cBranch: ''
+        }
+    },
     props: ["repo"],
     //add methods
     methods: {
@@ -51,6 +62,19 @@ export default {
         //delete specific package from repository
         delPkg(id) {
             this.repo.pkgs_array = this.repo.pkgs_array.filter(pkg => pkg.uiid != id);
+        },
+        //change branch to the specified one
+        changeBranch(e){
+            e.preventDefault();
+            if(this.cBranch != '') {
+                if(confirm("Do you really want to change branch?")){
+                    this.repo.branch = this.cBranch;
+                }
+            }else{
+                alert("you cannot change branch name with 'null' name")
+            }
+            //clear local data
+            this.cBranch= '';
         }
     }
 }
@@ -72,7 +96,7 @@ export default {
         color: red;
         background-color: whitesmoke;
         padding: 10px;
-        border-bottom: 3px #ccc dotted;
+        border-bottom: 3px black dotted;
     }
 
     .pkg-item {
@@ -81,7 +105,7 @@ export default {
         color: red;
         background-color: whitesmoke;
         padding: 10px;
-        border-bottom: 3px #ccc dotted;
+        border-bottom: 3px black dotted;
     }
 
     .is-clone{
@@ -98,6 +122,19 @@ export default {
         border-radius: 50%;
         cursor: pointer;
         float: left;
+    }
+
+    form{
+        display: inline;
+    }
+
+    input[type="text"] {
+        flex: 10;
+        padding: 5px;        
+    }
+
+    input[type="submit"]{
+        flex: 2;
     }
 
 </style>

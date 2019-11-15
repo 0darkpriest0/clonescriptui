@@ -69,7 +69,8 @@ export default {
   methods: {
     //delete repository
     delRepo(id) {
-      this.repos = this.repos.filter(repo => repo.uiid != id);
+      if(confirm("Do you really want to delete this repository?"))
+        this.repos = this.repos.filter(repo => repo.uiid != id);
     },
     //add repository
     addRepo(newRepo) {
@@ -77,10 +78,12 @@ export default {
     },
     //reset data
     reset() {
-      localStorage.conf = '';
-      localStorage.repos = '';
-      this.conf = '';
-      this.repos = '';
+      if(confirm("Do you really want to reset local data?")){
+        localStorage.conf = '';
+        localStorage.repos = '';
+        this.conf = '';
+        this.repos = '';
+      }
     },
     //load json file
     loadFile() {
