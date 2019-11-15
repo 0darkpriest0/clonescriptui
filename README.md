@@ -1,6 +1,6 @@
 # clonescriptui 
 ```
-Generate json file used by init_script.bash
+User interface generate json file used by init_script.bash
 ```
 ## User interface setup
 ```
@@ -18,12 +18,12 @@ After launch the user interface click on "LOAD DATA FILE" button
 ```
 ### About view
 ```
-Inside the user interfate you can find About button in the page header
+Inside the user interface you can find "About" button in the page header
 There are some tips to use well the inferface
 ```
 ### Customize configuration
 ```
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See: [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 
 # Generated file struct
@@ -36,16 +36,16 @@ conf:
 
 array of repository object
 clone_array:
-    "uiid": "exampleid"                     -- id generated for user interface by uuid v4
+    "uiid": "repoexampleid"                 -- id generated for user interface by uuid v4
     "name": "repoexamplename"               -- name of the repository    
-    "repository": "repoexamplelink@git"     -- online link of the repository
+    "repository": "repoexample@link"        -- online link of the repository
     "branch": "branchexamplename"           -- branch of the repository
     "clone": true/false                     -- specify if you want to clone this repository or not
 
     array of package object
     "pkgs_array": [
         {       
-            "uiid": "exampleid"             -- id generated for user interface by uuid v4       
+            "uiid": "pkgexampleid"          -- id generated for user interface by uuid v4       
             "name": "pkgexamplename"        -- name of the package
             "build": true/false             -- specify if you want to build this package or not
         }
