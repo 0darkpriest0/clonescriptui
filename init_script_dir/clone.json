@@ -1,0 +1,49 @@
+{"conf":{
+	"j1": true,
+	"ws_reset": true,
+	"ws_init_already": false
+},"clone_array":[
+	{
+		"uiid": "b51e70c7-0a17-4f20-864f-5785594af3e9",
+		"name": "repoexample1",
+		"repository": "repoexample1@git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "06c714d2-ca22-4a31-91dd-e7a83d570dd9",
+				"name": "pkgexample1",
+				"build": false
+			},
+			{
+				"uiid": "afa95ae4-0e5e-4f79-858b-7a235b13c3e9",
+				"name": "pkgexample2",
+				"build": true
+			},
+			{
+				"uiid": "b696531c-f702-4892-bc66-367e1ffd7a06",
+				"name": "pkgexample3",
+				"build": false
+			}
+		]
+	},
+	{
+		"uiid": "0c39da14-6a14-461e-8fc0-47840d1a3df4",
+		"name": "repoexample2",
+		"repository": "repoexample2@git",
+		"branch": "branchexample",
+		"clone": false,
+		"pkgs_array": [
+			{
+				"uiid": "d45c84e3-1533-4c90-a167-21ea5da831c3",
+				"name": "pkgexample1",
+				"build": true
+			},
+			{
+				"uiid": "b93c6d3c-d44a-47dd-a1e2-6b827e6d513d",
+				"name": "pkgexample2",
+				"build": false
+			}
+		]
+	}
+]}
