@@ -13,6 +13,7 @@ npm run serve
 ### Modify a clone.json
 ```
 clone.json file you want to modify must be in clonescriptui/public folder
+In public folder there is already a clone.json file example
 After launch the user interface click on "LOAD DATA FILE" button
 ```
 ### About view
@@ -56,8 +57,12 @@ clone_array:
 ## Configuration File: clone.json
 ## Folder: init_script_dir
 ```
-init_script.bash generate or modify a catkin workspace named ros_catkin_ws
+init_script.bash generate or modify a catkin workspace named ros_catkin_ws in the same folder
 It clone all the repository specified and build only the packages specified in clone.json
+```
+## Example
+```
+Inside init_script_dir folder there is already a clone.json file example
 ```
 ### Script setup
 ```
