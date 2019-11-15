@@ -31,7 +31,7 @@ conf:
 
 array of repository object
 clone_array:
-    "uiid": "exampleid"                       -- id generated for user interface by uuid v4
+    "uiid": "exampleid"                     -- id generated for user interface by uuid v4
     "name": "repoexamplename"               -- name of the repository    
     "repository": "repoexamplelink@git"     -- online link of the repository
     "branch": "branchexamplename"           -- branch of the repository
