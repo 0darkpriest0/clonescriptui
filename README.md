@@ -2,7 +2,7 @@
 ```
 Generate json file used by init_script.bash
 ```
-## Project setup
+## User interface setup
 ```
 npm install
 ```
