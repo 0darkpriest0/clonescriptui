@@ -22,9 +22,8 @@ Inside the user interface you can find "About" button in the page header
 There are some tips to use well the inferface
 ```
 ### Customize configuration
-```
-See: [Configuration Reference](https://cli.vuejs.org/config/).
-```
+See: [Configuration Reference](https://cli.vuejs.org/config/)
+
 
 # Generated file struct
 ```
