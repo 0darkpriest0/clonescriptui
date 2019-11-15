@@ -14,7 +14,7 @@
       Check the package to build it<br>
       <br><br>
       RESET DATA button reset local data<br>
-      LOAD DATA FILE load json file formatted for init_script.bash<br>
+      LOAD DATA FILE load json file formatted for init_script.bash (must be in public folder)<br>
       SAVE DATA TO FILE button generate a json file formatted for init_script.bash<br>
       </p>
   </div>

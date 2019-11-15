@@ -10,16 +10,20 @@ npm install
 ```
 npm run serve
 ```
-### Compiles and minifies for production
+### Modify a clone.json
 ```
-npm run build
+clone.json file you want to modify must be in clonescriptui/public folder
+After launch the user interface click on "LOAD DATA FILE" button
 ```
-### Lints and fixes files
+### About view
 ```
-npm run lint
+Inside the user interfate you can find About button in the page header
+There are some tips to use well the inferface
 ```
 ### Customize configuration
+```
 See [Configuration Reference](https://cli.vuejs.org/config/).
+```
 
 # Generated file struct
 ```
@@ -47,20 +51,20 @@ clone_array:
     ]
 ```
 
-# INIT_SCRIPT.BASH
+# init_script.bash
 
 ## Configuration File: clone.json
-## Directory: init_script_dir
+## Folder: init_script_dir
 ```
 init_script.bash generate or modify a catkin workspace named ros_catkin_ws
 It clone all the repository specified and build only the packages specified in clone.json
 ```
 ### Script setup
 ```
-clone.json and init_script.bash must be in the same directory.
+clone.json and init_script.bash must be in the same folder.
 ```
 ### Script launch
 ```
-Workdir: init_script.bash directory
+Workdir: init_script.bash folder
 Run command: ./init_script
 ```
