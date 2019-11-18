@@ -11,6 +11,7 @@
     "@syncfusion/ej2-vue-charts": "*",
     "@syncfusion/ej2-vue-grids": "^17.3.27",
     "@syncfusion/ej2-vue-navigations": "^17.3.27",
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.3.2",

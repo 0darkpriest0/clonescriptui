@@ -1,6 +1,17 @@
 <template>
   <div class="home">
     <!-- add Confs component to Home -->
+    <br>
+    <div>
+      <!-- <button class="addButton" @click="chooseFiles">LOAD DATA FROM FILE</button> -->
+      <input id="fileUpload" name="fileUpload" hidden type="file" v-on:change="loadFile" />
+      <label for="fileUpload" class="addButton">LOAD DATA FROM FILE</label>
+    </div>
+    <br>
+    <button class="addButton"  v-on:click="reset">RESET DATA</button>
+    <br><br>
+    <button class="addButton" v-on:click="createFile">SAVE DATA TO FILE</button>
+    <br><br>
     <p class="threeD">CONFIGURATION</p>
     <Confs v-bind:conf="conf" />
     <br><br>
@@ -8,12 +19,6 @@
     <p class="threeD">REPOSITORIES</p>
     <AddRepo v-on:add-repo="addRepo"/>
     <Repos v-bind:repos="repos" v-on:del-repo="delRepo" />
-    <br><br>
-    <button class="addButton" v-on:click="reset">RESET DATA</button>
-    <br><br>
-    <button class="addButton" v-on:click="loadFile">LOAD DATA FILE</button>
-    <br><br>
-    <button class="addButton" v-on:click="createFile">SAVE DATA TO FILE</button>
   </div>
 </template>
 
@@ -85,14 +90,16 @@ export default {
         this.repos = '';
       }
     },
-    //load json file
-    loadFile() {
-      fetch("clone.json")
-        .then(response => response.json())
-        .then(data => (this.conf = data.conf))
-      fetch("clone.json")
-        .then(response => response.json())
-        .then(data => (this.repos = data.clone_array));
+    //load data from json file
+    loadFile(ev) {
+      const file = ev.target.files[0];
+      const reader = new FileReader();      
+      reader.onload = e => this.conf = (JSON.parse(e.target.result).conf);
+      const reader2 = new FileReader();
+      reader2.onload = e => this.repos = (JSON.parse(e.target.result).clone_array);
+
+      reader.readAsText(file);
+      reader2.readAsText(file);
     },
     //create json file
     createFile() {
@@ -115,17 +122,31 @@ export default {
 
 <style>
 
-    .threeD {
-      margin-left: 10px;
-      width: 97%;
-      color: black;
-      white-space: nowrap;
-      font-size: 1em;
-      font-family: sans-serif;
-      text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey,
-          1px 3px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 3px 0 grey,
-          3px 7px 7px black;
-    }
+  .threeD {
+    margin-left: 10px;
+    width: 97%;
+    color: black;
+    white-space: nowrap;
+    font-size: 1em;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey,
+        1px 3px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 3px 0 grey,
+        3px 7px 7px black;
+  }
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
 
     /* Add Button 
     ==========================*/
@@ -134,6 +155,7 @@ export default {
       color: white !important;
       text-transform: uppercase;
       text-decoration: none;
+      font-size: 17px;
       background: rgb(37, 36, 36);
       padding: 9px;
       height: 100%;
