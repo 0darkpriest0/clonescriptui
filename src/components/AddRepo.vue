@@ -3,7 +3,7 @@
         <!-- form to create a new repository -->
         <form @submit="addRepo">
             <input type="text" v-model="name" name="repoName" placeholder="Name of New Repository...">
-            <input type="text" v-model="repository" name="repositoryName" placeholder="repository link of New Repository...">
+            <input type="text" v-model="repository" name="repositoryName" placeholder="Link of New Repository...">
             <input type="text" v-model="branch" name="repoBranch" placeholder="Branch of New Repository...">
             <!-- form submit button -->
             <input class="addButton" type="submit" value="Add New Repo">
