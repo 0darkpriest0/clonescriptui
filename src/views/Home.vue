@@ -86,8 +86,10 @@ export default {
       if(confirm("Do you really want to reset local data?")){
         localStorage.conf = '';
         localStorage.repos = '';
-        this.conf = '';
-        this.repos = '';
+        this.conf.j1 = false;
+        this.conf.ws_reset = false;
+        this.conf.ws_init_already = false;
+        this.repos = [];
       }
     },
     //load data from json file
