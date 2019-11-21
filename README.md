@@ -22,6 +22,14 @@ npm run pkgbuild
 ```
 npm run pkgbuildasar
 ```
+### Launch electron packaged app
+```
+workdir 'clonescriptui-linux-x64'
+if don't have permission use:
+    chmod +x clonescriptui
+launch:
+    ./clonescriptui
+```
 ## After launch
 
 ### Modify a clone.json
