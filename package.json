@@ -1,20 +1,19 @@
 {
   "name": "clonescriptui",
   "version": "0.1.0",
+  "main": "electron.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electronstart": "vue-cli-service build; electron . && cp /scr/assets/script.png",
+    "pkgbuild": "vue-cli-service build; electron-packager . clonescriptui",
+    "pkgbuildasar": "vue-cli-service build; electron-packager . clonescriptui; asar pack clonescriptui-linux-x64/resources/app clonescriptui-linux-x64/resources/app.asar"
   },
   "dependencies": {
-    "@syncfusion/ej2-vue-charts": "*",
-    "@syncfusion/ej2-vue-grids": "^17.3.27",
-    "@syncfusion/ej2-vue-navigations": "^17.3.27",
     "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.1.0",
-    "core-js": "^3.3.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3"
   },
@@ -26,7 +25,8 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "electron": "^7.1.2"
   },
   "eslintConfig": {
     "root": true,
