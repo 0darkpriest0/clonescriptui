@@ -10,6 +10,20 @@ npm install
 ```
 npm run serve
 ```
+### Build and launch with electron
+```
+npm run electronstart
+```
+### Build and package with electron-package
+```
+npm run pkgbuild
+```
+### Build and package with electron-package --asar
+```
+npm run pkgbuildasar
+```
+## After launch
+
 ### Modify a clone.json
 ```
 After launch the user interface click on "LOAD DATA FILE" button
