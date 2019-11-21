@@ -4,5 +4,17 @@ node_modules/
 # build
 dist/
 
-#package
+#linux package
 clonescriptui-linux-x64/
+clonescriptui-linux-arm64/
+clonescriptui-linux-armv7l/
+clonescriptui-linux-ia32/
+
+#win32 package
+clonescriptui-win32-x64/
+clonescriptui-win32-ia32/
+clonescriptui-win32-arm64/
+
+#mas package
+clonescriptui-mas-x64/
+
