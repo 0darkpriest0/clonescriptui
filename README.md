@@ -22,6 +22,10 @@ npm run pkgbuild
 ```
 npm run pkgbuildasar
 ```
+### Build and package with electron-package for all platform
+```
+npm run pkgbuildall
+```
 ### Launch electron packaged app
 ```
 workdir 'clonescriptui-linux-x64'

@@ -10,7 +10,7 @@
     "electronstart": "vue-cli-service build && electron . && cp /scr/assets/script.png",
     "pkgbuild": "vue-cli-service build && electron-packager . clonescriptui",
     "pkgbuildasar": "vue-cli-service build && electron-packager . clonescriptui && asar pack clonescriptui-linux-x64/resources/app clonescriptui-linux-x64/resources/app.asar",
-    "pkgbuildall": "electron-packager . clonescriptui --all"
+    "pkgbuildall": "vue-cli-service build && electron-packager . clonescriptui --all"
   },
   "dependencies": {
     "axios": "^0.19.0",
