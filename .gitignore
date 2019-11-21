@@ -5,4 +5,4 @@ node_modules/
 dist/
 
 #package
-./clonescriptui-linux-x64/*
+clonescriptui-linux-x64/
