@@ -72,7 +72,8 @@ clone_array:
 
 # init_script.bash
 
-## Configuration File: clone.json \Folder: init_script_dir
+## Configuration File: clone.json\
+Folder: init_script_dir
 ```
 init_script.bash generate or modify a catkin workspace named ros_catkin_ws in the same folder
 It clone all the repository specified and build only the packages specified in clone.json
