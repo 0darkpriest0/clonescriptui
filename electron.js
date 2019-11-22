@@ -11,8 +11,7 @@ function createWindow () {
     height: 600,
     icon: 'src/assets/script.png',
     webPreferences: {
-      nodeIntegration: true,
-      devTools: false
+      nodeIntegration: true
     }
   })
 
@@ -20,7 +19,7 @@ function createWindow () {
   win.loadFile('dist/index.html')
 
   // Apre il Pannello degli Strumenti di Sviluppo.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
   // Emesso quando la finestra viene chiusa.
   win.on('closed', () => {
