@@ -63,20 +63,23 @@
     .conf-item {
         display: table;
         width: 97%;
-        color: red;
+        color: rgb(253, 59, 48);
         background: #f4f4f4;
         padding: 10px;
         margin: 10px;
         border-bottom: 3px black dotted;
+        border-radius: 50px;
     }
 
     .item {
         display: table-cell;
         width: 30%;
+        vertical-align: middle;
+        padding-left: 1%;
     }
 
     .is-active {
-        color: rgb(31, 192, 31);
+        color: green;
     }
 
 </style>

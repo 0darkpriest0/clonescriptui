@@ -2,21 +2,31 @@
   <div class="home">
     <!-- add Confs component to Home -->
     <br>
-    <div>
-      <!-- <button class="addButton" @click="chooseFiles">LOAD DATA FROM FILE</button> -->
-      <input id="fileUpload" name="fileUpload" hidden type="file" v-on:change="loadFile" />
-      <label for="fileUpload" class="addButton">LOAD DATA FROM FILE</label>
-    </div>
-    <br>
-    <button class="addButton"  v-on:click="reset">RESET DATA</button>
+    <div class="dropdown">
+      <button class="dropbtn">hover me for action</button>
+      <div class="dropdown-content">
+        <div style="display: table">
+          <a>
+            <!-- <button class="addButton" @click="chooseFiles">LOAD DATA FROM FILE</button> -->
+            <input id="fileUpload" name="fileUpload" hidden type="file" v-on:change="loadFile" />
+            <label for="fileUpload" class="addButton">LOAD DATA FROM FILE</label>
+          </a>
+          <a>
+          <button class="addButton" v-on:click="reset">RESET DATA</button>
+          </a>
+          <a>
+            <button class="addButton" v-on:click="createFile">SAVE DATA TO FILE</button>
+          </a>
+        </div>
+      </div>
+    </div> 
+
     <br><br>
-    <button class="addButton" v-on:click="createFile">SAVE DATA TO FILE</button>
-    <br><br>
-    <p class="threeD">CONFIGURATION</p>
+    <p style="margin-left: 10px">CONFIGURATION</p>
     <Confs v-bind:conf="conf" />
     <br><br>
     <!-- add AddRepo and Repos components to Home -->
-    <p class="threeD">REPOSITORIES</p>
+    <p style="margin-left: 10px">REPOSITORIES</p>
     <AddRepo v-on:add-repo="addRepo"/>
     <Repos v-bind:repos="repos" v-on:del-repo="delRepo" />
   </div>
@@ -102,13 +112,18 @@ export default {
 
       reader.readAsText(file);
       reader2.readAsText(file);
+      alert("!new data loaded!");
     },
-    //create json file
-    createFile() {
-      //next three lines for json formatting
+    //json formatting
+    formatJson() {
       const confData = JSON.stringify(this.conf, null, "\t")
       const reposData = JSON.stringify(this.repos, null , "\t")
       const dataParsed = '{"conf":'+confData+',"clone_array":'+reposData+'}'
+      return dataParsed;
+    },
+    //create json file for download
+    createFile() {
+      const dataParsed = this.formatJson();
       const blob = new Blob([dataParsed], {type: 'text/plain'})
       const e = document.createEvent('MouseEvents'),
       a = document.createElement('a');
@@ -124,17 +139,55 @@ export default {
 
 <style>
 
-  .threeD {
+  /* Dropdown Button */
+  .dropbtn {
     margin-left: 10px;
-    width: 97%;
-    color: black;
-    white-space: nowrap;
-    font-size: 1em;
-    font-family: sans-serif;
-    text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey, 1px 2px 0 grey,
-        1px 3px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 3px 0 grey,
-        3px 7px 7px black;
+    color: white !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    background: rgb(37, 36, 36);
+    padding: 9px;
+    height: 100%;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.5s ease 0s;
   }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    padding: 3%;
+    position: absolute;
+    background-color: #ddd;
+    width: max-content;
+    border-radius: 50px;
+    outline: 2px dotted green;
+    -moz-outline-radius: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-table;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: inline-block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;} 
 
   .upload-btn-wrapper {
     position: relative;
@@ -161,7 +214,7 @@ export default {
       background: rgb(37, 36, 36);
       padding: 9px;
       height: 100%;
-      border-radius: 5px;
+      border-radius: 50px;
       display: inline-block;
       border: none;
       transition: all 0.5s ease 0s;

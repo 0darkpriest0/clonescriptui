@@ -1,5 +1,5 @@
 #!/bin/bash -       
-#title           :init_script.sh
+#title           :init_script
 #description     :This script will clone clone.json's repositories and build with catkin build only the packages in whitelist
 #author		     :Andrea Bernardi   
 #usage		     :./init_script.bash

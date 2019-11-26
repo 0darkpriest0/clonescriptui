@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <!-- binding class to value to change color when true/false-->
         <div class="pkg-item" v-bind:class="{'is-build':pkg.build}">
             <!-- add switch checkbox to enable/disable value -->
@@ -11,7 +11,7 @@
             <!-- print value -->
             {{pkg.name}}
             <!-- emit send to parent - delete package button  -->
-            <button @click="$emit('del-pkg', pkg.uiid)" class="del">X</button> 
+            <button @click="$emit('del-pkg', pkg.uiid)" class="btn btn-sm del">delete pkg</button> 
         </div>
     </div>
 </template>
@@ -32,25 +32,28 @@ export default {
 
 <style scoped>
 
+    .container {
+        display: table;
+        margin: 10px;
+        width: 97%;
+        border-radius: 50px;
+    }
+
     .pkg-item {
-        color: red;
+        color: rgb(253, 59, 48);
         background: #f4f4f4;
         padding: 10px;
         border-bottom: 1px #ccc dotted;
     }
 
     .is-build{
-        color: rgb(31, 192, 31);
+        color: green;
     }
     
     .del {
-        background: #ff0000;
-        color: #fff;
-        border: none;
-        padding: 5px 9px;
-        border-radius: 50%;
-        cursor: pointer;
         float: right;
+        background-color: rgb(253, 59, 48);
+        border-radius: 50px;
     }
 
 </style>

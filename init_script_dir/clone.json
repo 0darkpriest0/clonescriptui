@@ -1,48 +1,38 @@
 {"conf":{
 	"j1": true,
-	"ws_reset": true,
+	"ws_reset": false,
 	"ws_init_already": false
 },"clone_array":[
 	{
-		"uiid": "b51e70c7-0a17-4f20-864f-5785594af3e9",
-		"name": "repoexample1",
-		"repository": "repoexample1@git",
+		"uiid": "5909eca5-4815-48fe-8e39-8094f1b81d06",
+		"name": "clonescriptui",
+		"repository": "git@github.com:0darkpriest0/clonescriptui.git",
 		"branch": "master",
 		"clone": true,
 		"pkgs_array": [
 			{
-				"uiid": "06c714d2-ca22-4a31-91dd-e7a83d570dd9",
-				"name": "pkgexample1",
-				"build": false
-			},
-			{
-				"uiid": "afa95ae4-0e5e-4f79-858b-7a235b13c3e9",
-				"name": "pkgexample2",
+				"uiid": "c04661d9-27da-4923-9ac0-2c228ba8358a",
+				"name": "src",
 				"build": true
-			},
-			{
-				"uiid": "b696531c-f702-4892-bc66-367e1ffd7a06",
-				"name": "pkgexample3",
-				"build": false
 			}
 		]
 	},
 	{
-		"uiid": "0c39da14-6a14-461e-8fc0-47840d1a3df4",
-		"name": "repoexample2",
-		"repository": "repoexample2@git",
-		"branch": "branchexample",
-		"clone": false,
+		"uiid": "7683149e-309d-4f38-ab76-05a35815059a",
+		"name": "deployment-tool",
+		"repository": "git@github.com:0darkpriest0/deployment-tool.git",
+		"branch": "master",
+		"clone": true,
 		"pkgs_array": [
 			{
-				"uiid": "d45c84e3-1533-4c90-a167-21ea5da831c3",
-				"name": "pkgexample1",
+				"uiid": "558c06c6-cb35-4697-97f4-efd91c7d4773",
+				"name": "manager",
 				"build": true
 			},
 			{
-				"uiid": "b93c6d3c-d44a-47dd-a1e2-6b827e6d513d",
-				"name": "pkgexample2",
-				"build": false
+				"uiid": "09c38d60-09d7-4e3c-bdd3-91e4d11418fc",
+				"name": "agent",
+				"build": true
 			}
 		]
 	}

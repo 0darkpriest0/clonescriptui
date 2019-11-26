@@ -44,7 +44,7 @@
                     this.$emit('add-repo', newRepo);
                 }else{
                     
-                    alert("you can't insert a new repository with 'null' parameter\nname: "+this.name+"\nrepository link: "+this.repository+"\nbranch: "+this.branch)
+                    alert("!you can't insert a new repository with 'null' parameter\nname: "+this.name+"\nrepository link: "+this.repository+"\nbranch: "+this.branch+"!");
                 }
                 //clear local data
                 this.name= '';

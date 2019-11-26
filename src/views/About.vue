@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <p>
-      init_script web ui v1.0.0.<br>
+      init_script web ui v2.0.0.<br>
       Here you can create the clone.json file used by init_script.<br>
       <br><br>
       CONFIGURATION<br>

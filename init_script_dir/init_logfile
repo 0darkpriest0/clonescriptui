@@ -1,0 +1,17 @@
+init configuration
+j1-- true
+ws_reset-- false
+ws_init_already-- false
+no workspace reset
+workspace init
+finish configuration
+init clone
+git clone
+  -master - clonescriptui
+  -master - deployment-tool
+finish clone
+pkg to build:
+  -src
+  -manager
+  -agent
+start build

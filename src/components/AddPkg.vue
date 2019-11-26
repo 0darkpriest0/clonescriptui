@@ -33,7 +33,7 @@
                     //Send up to parent
                     this.$emit('add-pkg', newPkg);
                 }else{
-                    alert("you cannot insert a new package with 'null' name")
+                    alert("!you cannot insert a new package with 'null' name!")
                 }
                 //clear local data
                 this.name= '';
