@@ -1,5 +1,5 @@
 ssh pi@drone03.local
-mkdir /home/pi/test
 init_script.bash copied to drone
 clone.bash copied to drone
-chmod +x /home/pi/test/init_script.bash
+chmod +x /home/pi/init_script.bash
+./home/pi/init_script.bash

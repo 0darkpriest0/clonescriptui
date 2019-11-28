@@ -1,0 +1,204 @@
+{"conf":{
+	"j1": true,
+	"ws_reset": false,
+	"ws_init_already": false
+},"clone_array":[
+	{
+		"uiid": "8d766a7b-5a92-4d31-b58f-391414513a0d",
+		"name": "cpswarm_msgs",
+		"repository": "git@git.repository-pert.ismb.it:CPSwarm/cpswarm_msgs.git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "ada51410-ef72-4250-8807-1ab0af7dbbd4",
+				"name": "cpswarm_msgs",
+				"build": true
+			}
+		]
+	},
+	{
+		"uiid": "157036f3-0c5c-44bd-8986-a130e7f6dd82",
+		"name": "hardware_drivers",
+		"repository": "git@git.repository-pert.ismb.it:CPSwarm/abstraction-library/hardware_drivers.git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "41522a6a-3bbd-4014-b8dd-042ef2ca1c22",
+				"name": "obc_ros_openmv",
+				"build": true
+			},
+			{
+				"uiid": "7df5731d-d44d-457b-a069-db8d1fb68a7a",
+				"name": "obc_ros_sonar",
+				"build": true
+			},
+			{
+				"uiid": "2ae61318-d174-4d9f-8751-9c4db9c183e1",
+				"name": "obc_ros_uwb",
+				"build": true
+			}
+		]
+	},
+	{
+		"uiid": "e1099b47-34d2-4241-af2a-7d8aac628ee1",
+		"name": "hardware_functions",
+		"repository": "git@git.repository-pert.ismb.it:CPSwarm/abstraction-library/hardware_functions.git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "5ed62d4c-8063-403d-9bc5-007e4badbf77",
+				"name": "uav_mavros_takeoff",
+				"build": true
+			},
+			{
+				"uiid": "d05651ac-ba62-415d-be3e-97217781bdba",
+				"name": "uav_mavros_land",
+				"build": true
+			},
+			{
+				"uiid": "db881a04-9275-4d7f-9668-606d7ef7d193",
+				"name": "mission_aborter",
+				"build": true
+			}
+		]
+	},
+	{
+		"uiid": "4198024c-5a0c-4e14-b53a-128c1b8a193e",
+		"name": "sensing_actuation",
+		"repository": "git@git.repository-pert.ismb.it:CPSwarm/abstraction-library/sensing_actuation.git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "c24da2ff-7dc9-4b5e-a83f-37b3b3560f8e",
+				"name": "area_provider",
+				"build": true
+			},
+			{
+				"uiid": "8554d587-407e-4518-bfa7-8101ad22d655",
+				"name": "mavros_gps",
+				"build": true
+			},
+			{
+				"uiid": "cf1395f6-82a7-4b0e-928d-fdeb940ffd38",
+				"name": "mavros_pos_controller",
+				"build": true
+			},
+			{
+				"uiid": "de201037-6abc-49fb-a881-cbf455a1219d",
+				"name": "mavros_pos_provider",
+				"build": true
+			},
+			{
+				"uiid": "d13ccc6b-1a97-4e55-9608-f0d65f94d9dd",
+				"name": "mavros_vel_controller",
+				"build": true
+			},
+			{
+				"uiid": "f127d1fb-6efd-46cd-96e0-d539a9732063",
+				"name": "mavros_vel_provider",
+				"build": true
+			},
+			{
+				"uiid": "f4802f50-c3aa-47d9-8e8e-ad92514cc5c7",
+				"name": "obstacle_detection",
+				"build": true
+			}
+		]
+	},
+	{
+		"uiid": "004c667c-19b9-48e7-a0a3-d438a463434f",
+		"name": "swarm_functions",
+		"repository": "git@git.repository-pert.ismb.it:CPSwarm/swarm-library/swarm_functions.git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "3869eaa0-f5a4-4654-99d8-0c29cc9b9c8b",
+				"name": "area_division",
+				"build": true
+			},
+			{
+				"uiid": "d7fd7f1b-ad30-45c5-b5a0-d13067dffb1f",
+				"name": "coverage_path",
+				"build": true
+			},
+			{
+				"uiid": "062ffef3-4789-4a65-9848-65f4f7b532ee",
+				"name": "kinematics_exchanger",
+				"build": true
+			},
+			{
+				"uiid": "ef9f802b-78ba-4d14-a942-d0ac9158ec71",
+				"name": "target_monitor",
+				"build": true
+			},
+			{
+				"uiid": "d0b3174c-bcbf-47a4-aba1-e666f6afe617",
+				"name": "task_allocation",
+				"build": true
+			},
+			{
+				"uiid": "822f49f7-3689-4db6-996d-9e2143c747cf",
+				"name": "state_exchanger",
+				"build": true
+			}
+		]
+	},
+	{
+		"uiid": "71107475-b108-41ff-8579-c142eaa79e9c",
+		"name": "swarm_behaviors",
+		"repository": "git@git.repository-pert.ismb.it:CPSwarm/swarm-library/swarm_behaviors.git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "9d7e4c0e-65de-4ae3-b43c-74cc711878b7",
+				"name": "position",
+				"build": true
+			},
+			{
+				"uiid": "ca78011a-8a3a-4000-9acd-7f818f4777d2",
+				"name": "velocity",
+				"build": true
+			},
+			{
+				"uiid": "babf8914-6675-4dff-bcdb-0f5752a58683",
+				"name": "uav_local_coverage",
+				"build": true
+			},
+			{
+				"uiid": "4bb87b2f-2008-4dd4-9ac0-34b81e985794",
+				"name": "uav_random_direction",
+				"build": true
+			},
+			{
+				"uiid": "fc445aeb-d4df-4d3f-934e-2694ee09d501",
+				"name": "uav_simple_tracking",
+				"build": true
+			},
+			{
+				"uiid": "d8194264-f627-4ab8-9bef-692dd593a43e",
+				"name": "uav_flocking",
+				"build": true
+			}
+		]
+	},
+	{
+		"uiid": "9d7cbc3d-f4d0-49b3-b8b7-efd1345b092d",
+		"name": "complex_behaviors",
+		"repository": "git@git.repository-pert.ismb.it:CPSwarm/swarm-library/complex_behaviors.git",
+		"branch": "master",
+		"clone": true,
+		"pkgs_array": [
+			{
+				"uiid": "5947b15c-67ee-4e02-86bc-c9fd9795f873",
+				"name": "sar",
+				"build": true
+			}
+		]
+	}
+]}

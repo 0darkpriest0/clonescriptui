@@ -3,7 +3,7 @@
 #description     :This script will clone clone.json's repositories and build with catkin build only the packages in whitelist
 #author		     :Andrea Bernardi   
 #usage		     :./init_script.bash
-#notes           :Install jq to use this script
+#notes           :Install jq on drone to use this script --> sudo apt install jq
 #                :need clone.json file
 #                :work in pwd/ros_catkin_ws/src
 #bash_version    :sure to work on 4.3.8 or more
@@ -15,6 +15,9 @@ declare -a opt_array
 declare -a gitpath_array
 declare -a pkgsbuild_array
 declare -a pkgs_array_lenght
+
+#set name on ros directory name
+rosdir='ros_catkin_ws_test'
 
 j1=`jq '.conf.j1 ' clone.json`
 ws_reset=`jq '.conf.ws_reset' clone.json`
@@ -33,36 +36,31 @@ fi
 
 if [ $ws_reset == true ]
 then
-    cd ros_catkin_ws
+    cd $rosdir
     catkin clean -y
     cd ..
-    rm -rf ros_catkin_ws
+    rm -rf $rosdir
     rm -rf .catkin_tools
-    mkdir -p ros_catkin_ws/src
-    cd ros_catkin_ws/src
+    mkdir -p $rosdir/src
+    cd $rosdir/src
     catkin_init_workspace
-    cd ..
-    cd ..
+    cd ../..
     echo workspace reset >> init_logfile
 
 else
     catkin clean -y
     echo no workspace reset >> init_logfile
-
 fi
 
 if [ $ws_init_already == false ] && [ $ws_reset == false ]
 then
-    mkdir -p ros_catkin_ws/src
-    cd ros_catkin_ws/src
+    mkdir -p $rosdir/src
+    cd $rosdir/src
     catkin_init_workspace
-    cd ..
-    cd ..
+    cd ../..
     echo workspace init >> init_logfile
-
 else
     echo workspace init already >> init_logfile
-
 fi
 
 value=$(jq '.clone_array[].pkgs_array | length' clone.json);
@@ -88,10 +86,9 @@ do
     if [ $clone == true ]
     then
         gitpath_array+=($repo)
-
         echo "  -master - "$name >> init_logfile
     
-        cd ros_catkin_ws/src
+        cd $rosdir/src
         git clone $repo
         cd ../..
         
@@ -99,7 +96,7 @@ do
         then
             echo "      -update from master to "$branch" - "$name >> init_logfile
         
-            cd ros_catkin_ws/src/$name
+            cd $rosdir/src/$name
             git fetch --all
             git checkout $branch
             cd ../../..
@@ -135,7 +132,7 @@ do
 done
 
 echo start build >> init_logfile
-cd ros_catkin_ws
+cd $rosdir
 catkin config --whitelist ${pkgsbuild_array[@]}
 catkin build ${opt_array[0]}
 cd ..

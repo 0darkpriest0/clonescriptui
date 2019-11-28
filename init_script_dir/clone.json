@@ -4,36 +4,18 @@
 	"ws_init_already": false
 },"clone_array":[
 	{
-		"uiid": "5909eca5-4815-48fe-8e39-8094f1b81d06",
-		"name": "clonescriptui",
-		"repository": "git@github.com:0darkpriest0/clonescriptui.git",
+		"uiid": "8d766a7b-5a92-4d31-b58f-391414513a0d",
+		"name": "swarm_functions",
+		"repository": "https://github.com/cpswarm/swarm_functions.git",
 		"branch": "master",
 		"clone": true,
 		"pkgs_array": [
 			{
-				"uiid": "c04661d9-27da-4923-9ac0-2c228ba8358a",
-				"name": "src",
+				"uiid": "ada51410-ef72-4250-8807-1ab0af7dbbd4",
+				"name": "area_division",
 				"build": true
 			}
 		]
-	},
-	{
-		"uiid": "7683149e-309d-4f38-ab76-05a35815059a",
-		"name": "deployment-tool",
-		"repository": "git@github.com:0darkpriest0/deployment-tool.git",
-		"branch": "master",
-		"clone": true,
-		"pkgs_array": [
-			{
-				"uiid": "558c06c6-cb35-4697-97f4-efd91c7d4773",
-				"name": "manager",
-				"build": true
-			},
-			{
-				"uiid": "09c38d60-09d7-4e3c-bdd3-91e4d11418fc",
-				"name": "agent",
-				"build": true
-			}
-		]
-	}
-]}
+    }
+]
+}

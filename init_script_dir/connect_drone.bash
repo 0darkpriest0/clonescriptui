@@ -23,23 +23,22 @@ echo ssh $uservar@$dronevar.$netvar >> connect_logfile
 #sshpass -p $passvar scp connect_drone.bash $uservar@$dronevar.$netvar:/home/pi/
 #echo connect_drone.bash copied to drone >> connect_logfile
 #echo connect_drone.bash copied to drone
-sshpass -p $passvar ssh $uservar@$dronevar.$netvar 'mkdir /home/pi/test'
-echo mkdir /home/pi/test >> connect_logfile
-echo mkdir /home/pi/test
+#sshpass -p $passvar ssh $uservar@$dronevar.$netvar 'mkdir /home/pi/test'
+#echo mkdir /home/pi >> connect_logfile
+#echo mkdir /home/pi
 
-sshpass -p $passvar scp init_script.bash $uservar@$dronevar.$netvar:/home/pi/test/
+sshpass -p $passvar scp init_script.bash $uservar@$dronevar.$netvar:/home/pi
 echo init_script.bash copied to drone >> connect_logfile
 echo init_script.bash copied to drone 
 
-sshpass -p $passvar scp clone.json $uservar@$dronevar.$netvar:/home/pi/test/
+sshpass -p $passvar scp clone.json $uservar@$dronevar.$netvar:/home/pi
 echo clone.bash copied to drone >> connect_logfile
 echo clone.bash copied to drone
 
-sshpass -p $passvar ssh $uservar@$dronevar.$netvar 'chmod +x /home/pi/test/init_script.bash'
-echo chmod +x /home/pi/test/init_script.bash >> connect_logfile
+sshpass -p $passvar ssh $uservar@$dronevar.$netvar 'chmod +x /home/pi/init_script.bash'
+echo chmod +x /home/pi/init_script.bash >> connect_logfile
 echo chmod +x /home/pi/init_script.bash 
 
-sshpass -p $passvar ssh $uservar@$dronevar.$netvar 'pwd'
-sshpass -p $passvar ssh $uservar@$dronevar.$netvar './test/init_script.bash'
+sshpass -p $passvar ssh $uservar@$dronevar.$netvar './init_script.bash'
 echo ./home/pi/init_script.bash >> connect_logfile
-echo ./home/pi/test/init_script.bash
+echo ./home/pi/init_script.bash
