@@ -17,7 +17,7 @@ declare -a pkgsbuild_array
 declare -a pkgs_array_lenght
 
 #set name on ros directory name
-rosdir='ros_catkin_ws_test'
+rosdir='ros_catkin_ws'
 
 j1=`jq '.conf.j1 ' clone.json`
 ws_reset=`jq '.conf.ws_reset' clone.json`
