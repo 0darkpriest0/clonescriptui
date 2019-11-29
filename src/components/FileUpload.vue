@@ -1,3 +1,8 @@
+<!-- 
+Author: Andrea Bernardi 
+
+-->
+
 <template>
     <div>
         <label class="text-reader">

@@ -1,3 +1,8 @@
+<!-- 
+Author: Andrea Bernardi 
+
+-->
+
 <template>
     <div class="container">
         <!-- binding class to value to change color when true/false-->

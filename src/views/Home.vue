@@ -1,3 +1,8 @@
+<!--
+Author: Andrea Bernardi 
+
+-->
+
 <template>
   <div class="home">
     <!-- add Confs component to Home -->
