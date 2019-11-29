@@ -59,7 +59,7 @@ conf:
 array of repository object
 clone_array:
     "uiid": "repoexampleid"                 -- id generated for user interface by uuid v4
-    "name": "repoexamplename"               -- name of the repository    
+    "name": "repoexamplename"               -- name of the repository
     "repository": "repoexample@link"        -- online link of the repository
     "branch": "branchexamplename"           -- branch of the repository
     "clone": true/false                     -- specify if you want to clone this repository or not
@@ -79,8 +79,11 @@ clone_array:
 ## Configuration File: clone.json 
 ## Folder: init_script_dir
 ```
-init_script.bash generate or modify a catkin workspace named ros_catkin_ws in the same folder
-It clone all the repository specified and build only the packages specified in clone.json
+connect_drone.bash:
+    used to connect to the drone on the same network via ssh and launch init_script_bash
+init_script.bash:
+    generate or modify a catkin workspace named ros_catkin_ws in the same folder
+    clone all the repository specified and build only the packages specified in clone.json
 ```
 ## Example
 ```
@@ -88,10 +91,12 @@ Inside init_script_dir folder there is already a clone.json file example
 ```
 ### Script setup
 ```
-clone.json and init_script.bash must be in the same folder.
+clone.json, connect_drone.bash and init_script.bash must be in the same folder.
 ```
 ### Script launch
 ```
 Workdir: init_script.bash folder
-Run command: ./init_script
+Run command: 
+    -./connect_drone
+    -./init_script
 ```
