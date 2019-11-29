@@ -97,6 +97,6 @@ clone.json, connect_drone.bash and init_script.bash must be in the same folder.
 ```
 Workdir: init_script.bash folder
 Run command: 
-    -./connect_drone
-    -./init_script
+    ./connect_drone
+    ./init_script
 ```
